@@ -6,12 +6,14 @@ body {
 
 h1 {
   font-weight: 500;
-  font-size: 25px;
+  font-size: 22px;
   padding-left: 15px;
 }
 .find {
   margin-bottom: 10px;
   padding-left: 15px;
+  font-size: 15px;
+  color: #666;
 }
 .card {
   background: #FFF;
