@@ -47,4 +47,4 @@ $(document).ready(function() {
         message.innerHTML = "Days Lived";
     }
 
-});
+}); // CLOSE DOCUMENT READY
