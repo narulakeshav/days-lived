@@ -28,6 +28,7 @@ $(document).ready(function() {
         message.innerHTML = "Days Lived";
     }
 
+    // ADDS COMMAS TO LARGE NUMBERS
     function addCommas(num) {
         return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
