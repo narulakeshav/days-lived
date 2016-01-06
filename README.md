@@ -1,7 +1,7 @@
 # Days Lived
 A small script that determines how many days you've lived.
 
-[Check how many days You've Lived]()
+[Check how many days You've Lived](http://narulakeshav.github.io/days-lived)
 
 ![Screenshot](http://goo.gl/72hMgs)
 
