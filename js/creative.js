@@ -17,7 +17,7 @@ $(document).ready(function() {
         return addCommas(diffInDays);
     }
 
-    /* ADDS COMMAS TO LARGE NUMBERS */
+    /* ADDS COMMAS TO LARGE NUMBERS IF NECESSARY */
     function addCommas(num) {
         return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
@@ -32,7 +32,6 @@ $(document).ready(function() {
         else if(new Date().getFullYear() - new Date(dateByUser.value).getFullYear() >= 110) {
             var diff = calculateDays();
             message.innerHTML = "You're lying, but that's " + diff + " days.";
-            age.innerHTML = calculateAge() + " years old";
         }
 
         // OTHERWISE, CALCULATE DAYS & MESSAGE = "YOU'VE LIVED ____ DAYS"
@@ -40,10 +39,9 @@ $(document).ready(function() {
             var diff = calculateDays();
             if(diff == 1) message.innerHTML = "You've lived " + diff + " day.";
             else message.innerHTML = "You've lived " + diff + " days.";
-            age.innerHTML = calculateAge() + " years old.";
         }
     }
-  
+
     /* RESETS THE MESSAGE AND THE INPUT FIELD ON CLICK */
     reset.onclick = function() {
         dateByUser.value = "";
