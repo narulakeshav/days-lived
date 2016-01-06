@@ -1,9 +1,9 @@
 # Days Lived
 A small script that determines how many days you've lived.
 
-[Check how many days You've Lived](http://narulakeshav.github.io/days-lived)
+[CHECK HOW MANY DAYS YOU'VE LIVED](http://narulakeshav.github.io/days-lived)
 
-![Screenshot](http://goo.gl/72hMgs)
+![Screenshot](http://goo.gl/8cHXQ9)
 
 # How it Works
 I capture the input the user types by calling the 
