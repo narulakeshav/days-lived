@@ -14,8 +14,9 @@ Plan is to use `getTime()` so I could get the time in milliseconds and then conv
 ```
 new Date(dataByUser.value).getTime();
 ```
-The `Date` Object is so flexible that it takes any input by the user such as `April 13, 1997` and `Apr 13, 1997` and `04/13/1997` or even `04-13-1997`. 
-<br>
+The `Date` Object is so flexible that it takes any input by the user such as `April 13, 1997` and `Apr 13, 97` and `04/13/1997` or even `04-13-1997`. 
+
+
 Then I substracted the current day with given day and get the time in days by multiplying it:
 ```
 var diff = new Date().getTime() - new Date(dataByUser.value).getTime();
