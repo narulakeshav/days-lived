@@ -1,9 +1,13 @@
 $(document).ready(function() {
     
+    // INITIALIZING WOW.JS
+    new WOW().init();
+
     /* GETTING ELEMENTS IN HTML BY ID AND STORE THEM IN VARIABLE */
     var dateByUser = document.getElementById("date");
     var button = document.getElementById("calculate");
     var message = document.getElementById("message");
+    var hourMin = document.getElementById("hour-min");
     var reset = document.getElementById("reset");
 
     /* CONVERT THE TIME FROM MILLISECONDS TO DAYS */
@@ -15,6 +19,18 @@ $(document).ready(function() {
         // ROUND DOWN THE DAY AND DIVIDE THE DIFF (IN SECONDS) BY (1000 * 60 * 60 * 24)
         var diffInDays = Math.floor(diff / (1000 * 60 * 60 * 24));
         return addCommas(diffInDays);
+    }
+
+    function calculateHours() {
+        var diff = new Date().getTime() - new Date(dateByUser.value).getTime();
+        var diffInHr = Math.floor(diff / (1000 * 60 * 60));
+        return addCommas(diffInHr);
+    }
+
+    function calculateMinutes () {
+        var diff = new Date().getTime() - new Date(dateByUser.value).getTime();
+        var diffInMin = Math.floor(diff / (1000 * 60));
+        return addCommas(diffInMin);
     }
 
     /* ADDS COMMAS TO LARGE NUMBERS IF NECESSARY */
@@ -32,13 +48,17 @@ $(document).ready(function() {
         else if(new Date().getFullYear() - new Date(dateByUser.value).getFullYear() >= 110) {
             var diff = calculateDays();
             message.innerHTML = "You're lying, but that's " + diff + " days.";
+            hourMin.innerHTML = "That's " + calculateHours() + " hours or " + calculateMinutes() + " minutes.";
         }
 
         // OTHERWISE, CALCULATE DAYS & MESSAGE = "YOU'VE LIVED ____ DAYS"
         else {
             var diff = calculateDays();
             if(diff == 1) message.innerHTML = "You've lived " + diff + " day.";
-            else message.innerHTML = "You've lived " + diff + " days.";
+            else {
+                message.innerHTML = "You've lived " + diff + " days.";
+                hourMin.innerHTML = calculateHours() + " hours or " + calculateMinutes() + " minutes.";
+            }
         }
     }
 
