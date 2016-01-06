@@ -53,6 +53,12 @@ $(document).ready(function() {
             hourMin.innerHTML = "That's " + calculateHours() + " hours or " + calculateMinutes() + " minutes.";
         }
 
+        // IF THE USER IS FROM THE FUTURE
+        else if(calculateDays() < 0) {
+            message.innerHTML = "You're a FutureMan!!";
+            hourMin.innerHTML = "Did you go to Hogwarts School of Witchcraft?";
+        }
+
         // OTHERWISE, CALCULATE DAYS & MESSAGE = "YOU'VE LIVED ____ DAYS"
         else {
             var diff = calculateDays();
