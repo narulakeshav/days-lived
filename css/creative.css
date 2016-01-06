@@ -1,7 +1,7 @@
 body {
   font-family: Roboto;
   padding-top: 8em;
-  background: #EEEEEE;
+  background: radial-gradient(circle, #EEE, #CCC);
 }
 
 h1 {
@@ -10,7 +10,7 @@ h1 {
   padding-left: 15px;
 }
 .find {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   padding-left: 15px;
   font-size: 15px;
   color: #666;
@@ -49,7 +49,7 @@ label {
 .btn-success:focus {
   margin-top: 40px;
   outline: 0;
-  background: #2496EE;
+  background: #E74C3C;
   border: none;
   border-radius: 0;
   padding: 8px 15px;
@@ -61,13 +61,13 @@ label {
   box-shadow: 0px 0px 0px transparent;
 }
 .btn-success:hover {
-  background: #4EADF5;
+  background: #C0392B;
 }
 .btn-side,
 .btn-side:focus {
   background: transparent;
   border: none;
-  color: #2496EE;
+  color: #E74C3C;
   text-transform: uppercase;
   font-size: 13px;
   margin-top: 40px;
