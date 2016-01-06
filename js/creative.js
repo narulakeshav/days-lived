@@ -68,6 +68,7 @@ $(document).ready(function() {
     reset.onclick = function() {
         dateByUser.value = "";
         message.innerHTML = "Days Lived";
+        hourMin.innerHTML = "Find out how many days you've lived.";
     }
     
 }); // CLOSE DOCUMENT READY
