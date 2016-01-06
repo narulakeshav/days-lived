@@ -10,7 +10,7 @@ I capture the input the user types by calling the
 ```
 var dateByUser = document.getElementById("time");
 ```
-Plan is to use `getTime()` so I could get the time in milliseconds and then convert that to days. In order to get the milliseconds for what the user inputs, I could do:
+Plan is to use `getTime()` so I could get the time in milliseconds and then convert that to days. In order convert the date the user inputs into milliseconds, I could do:
 ```
 new Date(dataByUser.value).getTime();
 ```
