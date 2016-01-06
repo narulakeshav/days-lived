@@ -47,5 +47,5 @@ $(document).ready(function() {
         dateByUser.value = "";
         message.innerHTML = "Days Lived";
     }
-
+    
 }); // CLOSE DOCUMENT READY
