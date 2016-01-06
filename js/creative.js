@@ -37,7 +37,7 @@ $(document).ready(function() {
         // OTHERWISE, CALCULATE DAYS & MESSAGE = "YOU'VE LIVED ____ DAYS"
         else {
             var diff = calculateDays();
-            if(diff === 1) message.innerHTML = "You've lived " + diff + " day.";
+            if(diff == 1) message.innerHTML = "You've lived " + diff + " day.";
             else message.innerHTML = "You've lived " + diff + " days.";
         }
     }
