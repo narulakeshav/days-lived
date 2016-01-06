@@ -21,12 +21,14 @@ $(document).ready(function() {
         return addCommas(diffInDays);
     }
 
+    /* CONVERT THE TIME FROM MILLISECONDS TO HOURS */
     function calculateHours() {
         var diff = new Date().getTime() - new Date(dateByUser.value).getTime();
         var diffInHr = Math.floor(diff / (1000 * 60 * 60));
         return addCommas(diffInHr);
     }
 
+    /* CONVERT THE TIME FROM MILLISECONDS TO MINUTES */
     function calculateMinutes () {
         var diff = new Date().getTime() - new Date(dateByUser.value).getTime();
         var diffInMin = Math.floor(diff / (1000 * 60));
